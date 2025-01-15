@@ -8,10 +8,10 @@ In this project, I first reviewed the general structure of the CART algorithm an
 
 ## Decision Tree Visualization (Custom vs. Sklearn)
 An example of the visualization of the custom decision tree for classification in DOT format. Idea inspired by the [blog post](https://blog.csdn.net/weixin_40722661/article/details/101631344).
-![Custom Decision Tree for Classification](~/dt_output/vis_example.png)
+![Custom Decision Tree for Classification](dt_output/vis_example.png)
 
 An example of the visualization of the decision tree for classification using the plot_tree function. 
-![Decistion Tree for Classification Sklearn](~/dt_output/decision_tree_plot_sklearn.png)
+![Decistion Tree for Classification Sklearn](dt_output/decision_tree_plot_sklearn.png)
 
 
 
