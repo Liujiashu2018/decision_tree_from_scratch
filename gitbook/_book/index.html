@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>1. Introduction · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
@@ -57,6 +61,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="CART.html" />
+    
     
 
     </head>
@@ -90,7 +96,136 @@
                 <a href="./">
             
                     
-                    Introduction
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="CART.html">
+            
+                <a href="CART.html">
+            
+                    
+                    2. CART for Decision Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="CART.html">
+            
+                <a href="CART.html#2-1-general-structure">
+            
+                    
+                    2.1 General Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="CART.html">
+            
+                <a href="CART.html#2-2-overview-of-the-cart-algorithm-flow">
+            
+                    
+                    2.2 Overview of the CART Algorithm Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Metrics.html">
+            
+                <a href="Metrics.html">
+            
+                    
+                    3. Metrics to Decide a Good Split
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Metrics.html">
+            
+                <a href="Metrics.html#3-1-gini-impurity">
+            
+                    
+                    3.1 Gini Impurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Metrics.html">
+            
+                <a href="Metrics.html#3-2--entropy">
+            
+                    
+                    3.2 Entropy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Metrics.html">
+            
+                <a href="Metrics.html#3-3-mean-squared-error-mse">
+            
+                    
+                    3.3 Mean Squared Error (MSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="Metrics.html">
+            
+                <a href="Metrics.html#3-4-finding-the-best-split">
+            
+                    
+                    3.4 Finding the best split
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Build_tree.html">
+            
+                <a href="Build_tree.html">
+            
+                    
+                    4. Build a Tree
             
                 </a>
             
@@ -128,7 +263,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >1. Introduction</a>
     </h1>
 </div>
 
@@ -143,7 +278,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="1-introduction">1. Introduction</h1>
+<p>My journey with tree-based methods began in 2020 when I first encountered decision trees in a machine learning course. Like many students, I started by implementing decision trees using established packages - first with rpart in R, and later with sklearn in Python. Through this experience, I came to appreciate the fundamental importance of decision trees as they serve as the foundation for more advanced tree-based algorithms. This recognition inspired me to build a decision tree algorithm from scratch. By implementing the algorithm myself rather than relying on existing packages, I aim to deepen my understanding of the underlying methodology while strengthening my Python programming skills.</p>
+
                                 
                                 </section>
                             
@@ -171,6 +308,10 @@
             
                 
                 
+                <a href="CART.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 2. CART for Decision Tree">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
             
         
     </div>
@@ -178,7 +319,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"README.md","mtime":"2025-01-15T22:33:49.431Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-01-15T22:53:31.944Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1. Introduction","level":"1.1","depth":1,"next":{"title":"2. CART for Decision Tree","level":"1.2","depth":1,"path":"CART.md","ref":"CART.md","articles":[{"title":"2.1 General Structure","level":"1.2.1","depth":2,"anchor":"#2-1-general-structure","path":"CART.md","ref":"CART.md#2-1-general-structure","articles":[]},{"title":"2.2 Overview of the CART Algorithm Flow","level":"1.2.2","depth":2,"anchor":"#2-2-overview-of-the-cart-algorithm-flow","path":"CART.md","ref":"CART.md#2-2-overview-of-the-cart-algorithm-flow","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","livereload"],"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"README.md","mtime":"2025-01-16T00:49:43.530Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-01-16T01:16:56.312Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

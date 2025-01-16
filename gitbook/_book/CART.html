@@ -1,0 +1,398 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. CART for Decision Tree · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CART.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="CART.html">
+            
+                <a href="CART.html">
+            
+                    
+                    2. CART for Decision Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="CART.html">
+            
+                <a href="CART.html#2-1-general-structure">
+            
+                    
+                    2.1 General Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="CART.html">
+            
+                <a href="CART.html#2-2-overview-of-the-cart-algorithm-flow">
+            
+                    
+                    2.2 Overview of the CART Algorithm Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Metrics.html">
+            
+                <a href="Metrics.html">
+            
+                    
+                    3. Metrics to Decide a Good Split
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Metrics.html">
+            
+                <a href="Metrics.html#3-1-gini-impurity">
+            
+                    
+                    3.1 Gini Impurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Metrics.html">
+            
+                <a href="Metrics.html#3-2--entropy">
+            
+                    
+                    3.2 Entropy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Metrics.html">
+            
+                <a href="Metrics.html#3-3-mean-squared-error-mse">
+            
+                    
+                    3.3 Mean Squared Error (MSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="Metrics.html">
+            
+                <a href="Metrics.html#3-4-finding-the-best-split">
+            
+                    
+                    3.4 Finding the best split
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Build_tree.html">
+            
+                <a href="Build_tree.html">
+            
+                    
+                    4. Build a Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >2. CART for Decision Tree</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="2-cartclassification-and-regression-tree-for-decision-tree">2. CART(Classification And Regression Tree) for Decision Tree</h1>
+<p>Decision trees are non-parametric supervised learning techniques, meaning they do not assume any specific distribution for the underlying data. Instead, they learn patterns directly from labeled data, where the target variable is known. One of the most widely used decision tree methodologies is CART (Classification and Regression Tree), first introduced by Breiman et al. in 1984. As its name suggests, CART can be applied to both classification and regression tasks, forming the foundation for many modern decision tree algorithms.</p>
+<p>In this project, I will first review the general structure of the CART algorithm and provide a step-by-step guide to implementing it from scratch using only the pandas and numpy libraries in Python. Lastly, I will test my implementation on Python&#x2019;s built-in datasets &#x2014; the breast cancer dataset (for classification) and the diabetes dataset (for regression). The performance of my implementation will be compared with the established decision tree model available in the scikit-learn library.</p>
+<h2 id="21-general-structure">2.1 General Structure</h2>
+<p>In the image below, I tried to show the general structure of a simple decision tree. In this example, the outcome variable Y is binary, indicating whether a patient has heart disease or not:</p>
+<ul>
+<li>Y = 1: Patient has heart disease.</li>
+<li>Y = 0: Patient does not have heart disease.</li>
+</ul>
+<p><img src="dt_general_structure.png" alt="A Simple Decision Tree"></p>
+<p>Key Components of a Decision Tree:</p>
+<ul>
+<li>Root Node: The top node of the tree, representing the initial decision point. All data starts here and is split based on the most important feature.</li>
+<li>Internal Node: Also called decision nodes, these are the points where data is further splitted into subgroups based on certain conditions. Each internal node represents a decision or test on a feature.</li>
+<li>Leaf Node: The final node of the tree, containing the output or decision (e.g., whether the patient has heart disease or not). Leaf nodes do not split further.</li>
+</ul>
+<h2 id="22-overview-of-the-cart-algorithm-flow">2.2 Overview of the CART Algorithm Flow</h2>
+<p>In general, the CART algorithm builds a decision tree by recursively splitting the dataset into subsets based on feature values. The goal is to create pure subsets where the target variable is as homogeneous as possible. Below are the key steps in the CART algorithm.</p>
+<ol>
+<li>Choose the Best Split: Search through all the predictors and possible split points (thresholds). Pick the predctor and split point that result in the best split, minimizing impurity (e.g., Gini index for classification or Mean Squared Error for regression). This feature and threshold combination become the root node.</li>
+<li>Split the Data: Divides the data into two subsets based on the chosen feature and threshold:<ul>
+<li>One subset where the condition is true (e.g., feature value &#x2264; threshold).</li>
+<li>Another subset where the condition is false (e.g., feature value &gt; threshold).</li>
+</ul>
+</li>
+<li>Recursive binary splitting: Starting from the previously formed region. Repeat step 1 and 2, and stop once a stopping criterion is reached. </li>
+<li>Assign Outcomes to Leaf Nodes: Once the stopping criterion is reached and no further splits are possible, assign a final prediction to each leaf node:<ul>
+<li>For classification tasks, assign the majority class of the samples in the node.</li>
+<li>For regression tasks, assign the mean target value of the samples in the node.</li>
+</ul>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 1. Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="CART.html#2-1-general-structure" class="navigation navigation-next " aria-label="Next page: 2.1 General Structure">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. CART for Decision Tree","level":"1.2","depth":1,"next":{"title":"2.1 General Structure","level":"1.2.1","depth":2,"anchor":"#2-1-general-structure","path":"CART.md","ref":"CART.md#2-1-general-structure","articles":[]},"previous":{"title":"1. Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","livereload"],"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"CART.md","mtime":"2025-01-16T01:01:49.108Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-01-16T01:16:56.312Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
