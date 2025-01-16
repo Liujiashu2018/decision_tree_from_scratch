@@ -1,21 +1,19 @@
 # 3. Metrics to Decide a Good Split
 The CART algorithm evaluates possible splits to identify the one that minimizes impurity or error. Different metrics are used depending on the task. 
 ## 3.1 Gini Impurity
-Suppose the response variable $Y$ has $C$ different classes, and the tree has $R$ total regions/nodes. We want to first measure the purity of a single node.  
+Suppose the response variable Y has C different classes, and the tree has R total regions/nodes. We want to first measure the purity of a single node.  
 
-Let $p$ = proportion of cases in region/node $r$ that are of class $c$,  the node/region's Gini Impurity, or Gini Index, is calculated as:  
-
+Let p = proportion of cases in region/node r that are of class c,  the node/region's Gini Impurity, or Gini Index, is calculated as:  
 $$
 G_r = \sum_{c=1}^{C} \left( p \cdot (1 - p) \right)
 $$
-
-The smaller $G$ is, the purer the region $r$ becomes. When $G = 0$, the region is perfectly pure, meaning all samples in the node belong to a single class.
+The smaller G is, the purer the region r becomes. When G = 0, the region is perfectly pure, meaning all samples in the node belong to a single class.
 
 To determine the "best" binary split, we compute the **weighted Gini** Impurity as follows:
 $$
 G_{\text{weighted}} = \sum_{r=1}^{R} \left( G_r \cdot \frac{\text{\# cases in region } r}{\text{total \# cases}} \right)
 $$
-The split with the lowest $G_{\text{weighted}}$ is considered the "best" split. This metric is primarily used in **classification tasks**.
+The split with the lowest $G_{\\text{weighted}}$ is considered the "best" split. This metric is primarily used in **classification tasks**.
 
 ```python
 # Define Helper Functions
@@ -65,9 +63,9 @@ $$
 Entropy_r = -\sum_{c=1}^{C} \left( p \cdot log_2(p) \right)
 $$
 where
-- Entropy_r is the entropy of a region/node $r$.
-- C is the total number of classes in the response vairable $Y$.
-- $p$ is the proportion of cases in region/node $r$ that beglong to class $c$.
+- Entropy_r is the entropy of a region/node r.
+- C is the total number of classes in the response vairable Y.
+- p is the proportion of cases in region/node r that beglong to class c.
 To determine the "best" binary split using entropy, we compute the **weighted entropy** as follows:
 $$
 Entropy_{\text{weighted}} = \sum_{r=1}^{R} \left( Entropy_r \cdot \frac{\text{\# cases in region } r}{\text{total \# cases}} \right)
@@ -100,12 +98,12 @@ $$
 MSE_r = \frac{1}{N_r} \sum_{i=1}^{N_r} \left( y_i - \bar{y_r} \right)^2
 $$
 where:
-- $MSE_r$ is the Mean Squared Error for region/node $r$.
-- $N_r$ is the number of cases in region $r$.
-- $y_i$ represents the true target value of the $i$-th case in region $r$.
-- $\bar{y_r}$ is the mean target value of all cases in region $r$.
+- MSE_r is the Mean Squared Error for region/node r.
+- N_r is the number of cases in region r.
+- y_i represents the true target value of the i-th case in region r.
+- \(\bar{y_r}\) is the mean target value of all cases in region r.
 
-The smaller $MSE_r$ is, the less variance there is in the region, indicating a better split. If $MSE_r = 0$, the region is perfectly pure.
+The smaller MSE_r is, the less variance there is in the region, indicating a better split. If MSE_r = 0, the region is perfectly pure.
 
 To determine the "best" binary split using MSE, we compute the **weighted MSE** as follows:
 $$
