@@ -1,0 +1,6 @@
+# 6. Conclusion
+Now we have seen how to build a basic decision tree from scratch using only pandas and numpy. Despite its simplicity, the custom algorithm performs reasonably well on both classification and regression tasks, as demonstrated with the breast cancer and diabetes datasets.
+
+This project highlights the core mechanics of the CART algorithm, including recursive splitting, calculating metrics like Gini impurity and MSE, and defining stopping criteria to avoid overfitting. By comparing the custom decision tree with sklearn's implementation, we observed that the custom model achieves comparable results, validating the robustness of the algorithm.
+
+Building this decision tree from scratch has been both a challenging and rewarding journey. I enjoyed the process of deepening my understanding of the underlying algorithm. There are certainly opportunities for further enhancements, such as adding support for pruning to reduce overfitting. My next step is probably to sracth other algorithm based on the decision tree framework, such as the Random Forest and Gradient Boosted Trees.

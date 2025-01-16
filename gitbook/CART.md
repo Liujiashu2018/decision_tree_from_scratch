@@ -8,7 +8,7 @@ In the image below, I tried to show the general structure of a simple decision t
 - Y = 1: Patient has heart disease.
 - Y = 0: Patient does not have heart disease.
 
-![A Simple Decision Tree](dt_general_structure.png)
+![A Simple Decision Tree](images/dt_general_structure.png)
 
 Key Components of a Decision Tree:
 - Root Node: The top node of the tree, representing the initial decision point. All data starts here and is split based on the most important feature.

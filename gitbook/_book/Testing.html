@@ -1,0 +1,582 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5. Testing the Algorithm · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Testing.html" />
+    
+    
+    <link rel="prev" href="Build_tree.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="CART.html">
+            
+                <a href="CART.html">
+            
+                    
+                    2. CART for Decision Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="CART.html">
+            
+                <a href="CART.html#21-general-structure">
+            
+                    
+                    2.1 General Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="CART.html">
+            
+                <a href="CART.html#22-overview-of-the-cart-algorithm-flow">
+            
+                    
+                    2.2 Overview of the CART Algorithm Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Metrics.html">
+            
+                <a href="Metrics.html">
+            
+                    
+                    3. Metrics to Decide a Good Split
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Metrics.html">
+            
+                <a href="Metrics.html#31-gini-impurity">
+            
+                    
+                    3.1 Gini Impurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Metrics.html">
+            
+                <a href="Metrics.html#32--entropy">
+            
+                    
+                    3.2 Entropy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Metrics.html">
+            
+                <a href="Metrics.html#33-mean-squared-error-mse">
+            
+                    
+                    3.3 Mean Squared Error (MSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="Metrics.html">
+            
+                <a href="Metrics.html#34-finding-the-best-split">
+            
+                    
+                    3.4 Finding the best split
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Build_tree.html">
+            
+                <a href="Build_tree.html">
+            
+                    
+                    4. Build a Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    5. Testing the Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="Testing.html">
+            
+                <a href="Testing.html#51-testing-case-predicting-breast-cancer">
+            
+                    
+                    5.1 Classification
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="Testing.html">
+            
+                <a href="Testing.html#511-decision-tree-visualization">
+            
+                    
+                    5.1.1 Decision Tree Visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="Testing.html">
+            
+                <a href="Testing.html#52-testing-case-predicting-diabetes">
+            
+                    
+                    5.2 Regression
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="conclusion.html">
+            
+                <a href="conclusion.html">
+            
+                    
+                    6. Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >5. Testing the Algorithm</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="5-testing-the-algorithm">5. Testing the Algorithm</h1>
+<h2 id="51-testing-case-predicting-breast-cancer">5.1 Testing case: Predicting Breast Cancer</h2>
+<p>To evaluate the algorithm&apos;s performance for classification tasks, I tested it using the Breast Cancer dataset from the sklearn library. The target variable in this dataset is binary, with two classes: &apos;malignant&apos; and &apos;benign&apos;. The goal of this test case is to predict whether a tumor is malignant or benign.</p>
+<p>I first applied the custom decision tree algorithm to perform the classification task. Then, I compared its performance to the sklearn DecisionTreeClassifier. Both algorithms were tested using the same training and testing datasets, and the classification was performed using the Gini impurity criterion.</p>
+<p>The results show that our custom algorithm achieved an accuracy of 92.98%, which is slightly lower than the 95% accuracy achieved by the sklearn implementation. This indicates that our custom algorithm can handle classification tasks effectively, but there is still room for improvement and optimization.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Test case: Predicting Breast Cancer</span>
+<span class="hljs-comment"># Load data</span>
+breast_cancer = load_breast_cancer()
+<span class="hljs-comment"># print (breast_cancer.feature_names)</span>
+<span class="hljs-comment"># print (breast_cancer.target_names)</span>
+data = pd.DataFrame(data=breast_cancer.data, columns=breast_cancer.feature_names)
+data[<span class="hljs-string">&apos;target&apos;</span>] = breast_cancer.target
+<span class="hljs-comment"># Split data into test and train</span>
+X = data.iloc[:, :<span class="hljs-number">-1</span>]
+y = data[<span class="hljs-string">&apos;target&apos;</span>]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>, random_state=<span class="hljs-number">42</span>)
+</code></pre>
+<p>Predict using my custom algorithm:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Testing the algorithm using the customed alogrithm</span>
+train_data = np.hstack((X_train.values, y_train.values.reshape(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>)))  <span class="hljs-comment"># Merge features and target</span>
+target_index = train_data.shape[<span class="hljs-number">1</span>] - <span class="hljs-number">1</span>  
+tree = DecisionTree(max_depth=<span class="hljs-number">5</span>, min_sample=<span class="hljs-number">10</span>) 
+tree.fit(train_data, target_index)
+print(tree.tree)
+tree_structure = tree.tree
+
+<span class="hljs-comment"># Predict using test set</span>
+predictions = [tree.predict(row) <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> X_test.values]
+
+<span class="hljs-comment"># Evaluate the model</span>
+accuracy = accuracy_score(y_test, predictions)
+print(f<span class="hljs-string">&quot;Accuracy: {accuracy * 100:.2f}%&quot;</span>)
+</code></pre>
+<p>Predict using sklearn:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Build the decision tree using the sklearn package</span>
+decision_tree_classifier = DecisionTreeClassifier(criterion=<span class="hljs-string">&apos;gini&apos;</span>, random_state=<span class="hljs-number">42</span>)
+decision_tree_classifier.fit(X_train, y_train)
+predictions = decision_tree_classifier.predict(X_test)
+print(f<span class="hljs-string">&quot;Model&apos;s Accuracy: {accuracy_score(y_test, predictions):.2f}&quot;</span>)
+</code></pre>
+<h3 id="511-decision-tree-visualization">5.1.1 Decision Tree Visualization</h3>
+<p>The plot_tree function from the sklearn library is a commonly used tool when we want to visualize decision trees. However, to visualize the custom decision tree and better understand its structure and performance, I created a function that converts a tree dictionary into a DOT format file. This approach allows for a clear visualization of the tree and was inspired by a <a href="https://blog.csdn.net/weixin_40722661/article/details/101631344" target="_blank">blog post</a>. </p>
+<pre><code class="lang-python"><span class="hljs-comment"># Decision Tree Visulization (custom)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_dot_file</span><span class="hljs-params">(tree, filepath, attrs=None, classes=None, depth=<span class="hljs-number">0</span>, node_id=<span class="hljs-number">0</span>)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;
+    Convert a tree dictionary into a DOT file format.
+
+    Parameters:
+        tree: The tree structure as a nested dictionary.
+        filepath: Path to save the DOT file.
+        attrs: Feature names (optional).
+        classes: Class names (optional).
+        depth: Current depth (used internally for recursive node indexing).
+        node_id: Current node ID (used internally for recursive node indexing).
+
+    Returns:
+        The next available node_id for indexing.
+    &apos;&apos;&apos;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">node_label</span><span class="hljs-params">(node)</span>:</span>
+        <span class="hljs-keyword">if</span> isinstance(node, dict): <span class="hljs-comment"># If the node is a dictionary, it is a terminal/decision node.</span>
+            <span class="hljs-comment"># if attrs:</span>
+            <span class="hljs-comment">#     feature = attrs[node[&apos;feature&apos;]]</span>
+            <span class="hljs-comment"># else:</span>
+            <span class="hljs-comment">#     feature = f&quot;Feature {node[&apos;feature&apos;]}&quot;</span>
+            feature = attrs[node[<span class="hljs-string">&apos;feature&apos;</span>]] <span class="hljs-keyword">if</span> attrs <span class="hljs-keyword">else</span> f<span class="hljs-string">&quot;Feature {node[&apos;feature&apos;]}&quot;</span>
+            <span class="hljs-keyword">return</span> f<span class="hljs-string">&quot;{feature} &lt;= {node[&apos;threshold&apos;]}&quot;</span>
+        <span class="hljs-keyword">else</span>:  <span class="hljs-comment"># Leaf node</span>
+            <span class="hljs-keyword">return</span> f<span class="hljs-string">&quot;Class: {classes[int(node)] if classes else node}&quot;</span> <span class="hljs-comment"># If classes is not provided, use the value of node directly as the class label</span>
+
+    <span class="hljs-keyword">with</span> open(filepath, <span class="hljs-string">&quot;w&quot;</span>) <span class="hljs-keyword">as</span> dot_file:
+        dot_file.write(<span class="hljs-string">&quot;digraph Tree {\n&quot;</span>)
+
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">recurse</span><span class="hljs-params">(node, parent_id=None)</span>:</span>
+            <span class="hljs-keyword">nonlocal</span> node_id
+            current_id = node_id
+            node_id += <span class="hljs-number">1</span>
+
+            <span class="hljs-comment"># Writes a line to the opened DOT file to record the current node</span>
+            dot_file.write(f<span class="hljs-string">&apos;    {current_id} [label=&quot;{node_label(node)}&quot;];\n&apos;</span>)
+
+            <span class="hljs-comment"># parent_id ensures the hierarchical structure. Each node has a parent node except the root node.</span>
+            <span class="hljs-keyword">if</span> parent_id <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:
+                dot_file.write(f<span class="hljs-string">&apos;    {parent_id} -&gt; {current_id};\n&apos;</span>)
+
+            <span class="hljs-comment"># Recurse for left and right children if node is a terminal/decision node</span>
+            <span class="hljs-keyword">if</span> isinstance(node, dict):
+                recurse(node[<span class="hljs-string">&apos;left&apos;</span>], current_id)
+                recurse(node[<span class="hljs-string">&apos;right&apos;</span>], current_id)
+
+        recurse(tree)
+        dot_file.write(<span class="hljs-string">&quot;}&quot;</span>)
+
+feature_names = list(X_train.columns) 
+class_names = [<span class="hljs-string">&quot;Malignant&quot;</span>, <span class="hljs-string">&quot;Benign&quot;</span>] 
+
+<span class="hljs-comment"># Save the tree as a DOT file</span>
+write_dot_file(
+    tree=tree_structure,
+    filepath=<span class="hljs-string">&quot;decision_tree_update.dot&quot;</span>,
+    attrs=feature_names,
+    classes=class_names
+)
+<span class="hljs-comment"># Source.from_file(&quot;decision_tree_update.dot&quot;).view()</span>
+</code></pre>
+<p><img src="images/vis_example.png" alt="Example DOT Output"></p>
+<p>Below is the visualization of the decision tree generated using the sklearn package, created with the plot_tree function.</p>
+<p><img src="images/decision_tree_plot_sklearn.png" alt="Sklearn Output"></p>
+<h2 id="52-testing-case-predicting-diabetes">5.2 Testing case: Predicting Diabetes</h2>
+<p>To evaluate the algorithm&apos;s performance for <strong>regression tasks</strong>, I tested it using the Diabetes dataset from the sklearn library. This dataset contains 10 predictors and a target variable representing a quantitative measure of disease progression. <a href="https://scikit-learn.org/1.5/datasets/toy_dataset.html" target="_blank">See the full dataset description</a>. </p>
+<p>Again, the goal of this test is to compare the custom decision tree regressor against sklearn&apos;s DecisionTreeRegressor using the same training and testing datasets. The performance is assessed using common regression metrics: Mean Squared Error (MSE), Mean Absolute Error (MAE), and R&#xB2; Score.</p>
+<p>Both models achieve the same R&#xB2; score (0.33) and show similar results for MSE and MAE, indicating a moderate fit to the data. While neither model fully captures the variance in the dataset, the results validate that our custom algorithm performs effectively and is competitive with sklearn&apos;s implementation.</p>
+<pre><code class="lang-python">diabetes = load_diabetes()
+<span class="hljs-comment"># print(pd.isna(diabetes)) # check NA values</span>
+data_reg = pd.DataFrame(data=diabetes.data, columns=diabetes.feature_names)
+data_reg[<span class="hljs-string">&apos;target&apos;</span>] = diabetes.target
+<span class="hljs-comment"># Split data into test and train</span>
+X = data_reg.iloc[:, :<span class="hljs-number">-1</span>]
+y = data_reg[<span class="hljs-string">&apos;target&apos;</span>]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>, random_state=<span class="hljs-number">42</span>)
+</code></pre>
+<p>Predict using my custom algorithm:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Combine X_train and y_train for custom algorithms</span>
+train_data = np.hstack((X_train.values, y_train.values.reshape(<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>))) 
+target_index = train_data.shape[<span class="hljs-number">1</span>] - <span class="hljs-number">1</span>  
+reg_tree = DecisionTree(task = <span class="hljs-string">&apos;regression&apos;</span>, criterion= <span class="hljs-string">&apos;mse&apos;</span>, max_depth=<span class="hljs-number">5</span>, min_sample=<span class="hljs-number">10</span>) 
+reg_tree.fit(train_data, target_index)
+print(reg_tree.tree)
+
+<span class="hljs-comment"># Predict</span>
+tree_structure = reg_tree.tree
+reg_predictions = [reg_tree.predict(row) <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> X_test.values]
+
+<span class="hljs-comment"># Evaluate custom Decision Tree for regression</span>
+custom_mse = mean_squared_error(y_test, reg_predictions)
+custom_mae = mean_absolute_error(y_test, reg_predictions)
+custom_r2 = r2_score(y_test, reg_predictions)
+</code></pre>
+<p>Model Comparision:</p>
+<p><img src="images/model_comparison.png" alt="model comparison"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Build_tree.html" class="navigation navigation-prev " aria-label="Previous page: 4. Build a Tree">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Testing.html#51-testing-case-predicting-breast-cancer" class="navigation navigation-next " aria-label="Next page: 5.1 Classification">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5. Testing the Algorithm","level":"1.5","depth":1,"next":{"title":"5.1 Classification","level":"1.5.1","depth":2,"anchor":"#51-testing-case-predicting-breast-cancer","path":"Testing.md","ref":"Testing.md#51-testing-case-predicting-breast-cancer","articles":[{"title":"5.1.1 Decision Tree Visualization","level":"1.5.1.1","depth":3,"anchor":"#511-decision-tree-visualization","path":"Testing.md","ref":"Testing.md#511-decision-tree-visualization","articles":[]}]},"previous":{"title":"4. Build a Tree","level":"1.4","depth":1,"path":"Build_tree.md","ref":"Build_tree.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","livereload"],"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"Testing.md","mtime":"2025-01-16T02:24:09.402Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-01-16T02:24:33.507Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
